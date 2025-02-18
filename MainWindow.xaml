@@ -1,0 +1,128 @@
+﻿<Window x:Class="Wordle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Wordle (ver. 2)" Height="800" Width="600"
+        WindowStyle="SingleBorderWindow"
+        AllowsTransparency="False">
+
+    <Grid Background="White">
+
+        <!-- Title TextBlock der viser navnet på spillet-->
+        <TextBlock Text="Wordle"
+                   FontSize="76"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Top"
+                   Margin="10,20,10,10" />
+
+        <!-- Spillets main grid til text inputs -->
+        <Grid Margin="90,126,90,273">
+            <Grid.RowDefinitions>
+                <!-- Row definitions der opretter gitter look'et -->
+                <RowDefinition Height="*" />
+                <RowDefinition Height="5" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="5" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="5" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="5" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="5" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <!-- Kolonne defintions der opretter gitter look'et -->
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Textboxes til user input (5 kolonner x 6 rækker) -->
+            <!-- række 1, hver kasse repræsenterer 1 bogstavs input imod gættet -->
+            <TextBox Name="Textinput0_0" Grid.Row="0" Grid.Column="0" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Textinput0_1" Grid.Row="0" Grid.Column="2" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Textinput0_2" Grid.Row="0" Grid.Column="4" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Textinput0_3" Grid.Row="0" Grid.Column="6" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Textinput0_4" Grid.Row="0" Grid.Column="8" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+            <!-- række 2, hver kasse repræsenterer 1 bogstavs input imod gættet -->
+            <TextBox Name="Textinput1_0" Grid.Row="2" Grid.Column="0" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Textinput1_1" Grid.Row="2" Grid.Column="2" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Textinput1_2" Grid.Row="2" Grid.Column="4" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Textinput1_3" Grid.Row="2" Grid.Column="6" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Textinput1_4" Grid.Row="2" Grid.Column="8" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+            <!-- række 3, hver kasse repræsenterer 1 bogstavs input imod gættet -->
+            <TextBox Name="Textinput2_0" Grid.Row="4" Grid.Column="0" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Textinput2_1" Grid.Row="4" Grid.Column="2" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Textinput2_2" Grid.Row="4" Grid.Column="4" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Textinput2_3" Grid.Row="4" Grid.Column="6" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Textinput2_4" Grid.Row="4" Grid.Column="8" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+            <!-- række 4, hver kasse repræsenterer 1 bogstavs input imod gættet -->
+            <TextBox Name="Textinput3_0" Grid.Row="6" Grid.Column="0" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Textinput3_1" Grid.Row="6" Grid.Column="2" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Textinput3_2" Grid.Row="6" Grid.Column="4" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Textinput3_3" Grid.Row="6" Grid.Column="6" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Textinput3_4" Grid.Row="6" Grid.Column="8" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+            <!-- række 5, hver kasse repræsenterer 1 bogstavs input imod gættet -->
+            <TextBox Name="Textinput4_0" Grid.Row="8" Grid.Column="0" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Textinput4_1" Grid.Row="8" Grid.Column="2" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Textinput4_2" Grid.Row="8" Grid.Column="4" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Textinput4_3" Grid.Row="8" Grid.Column="6" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Textinput4_4" Grid.Row="8" Grid.Column="8" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+            <!-- række 6, hver kasse repræsenterer 1 bogstavs input imod gættet -->
+            <TextBox Name="Textinput5_0" Grid.Row="10" Grid.Column="0" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Textinput5_1" Grid.Row="10" Grid.Column="2" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Textinput5_2" Grid.Row="10" Grid.Column="4" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Textinput5_3" Grid.Row="10" Grid.Column="6" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Textinput5_4" Grid.Row="10" Grid.Column="8" MaxLength="1" IsReadOnly="True" FontWeight="Bold" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </Grid>
+
+        <!-- Keyboard -->
+        <UniformGrid Margin="0,612,0,10" Rows="3" HorizontalAlignment="Center" Width="580">
+            <!-- række 1 af keyboardet, hver knap repræsenterer et bogstav på keyboardet -->
+            <Button Content="Q" Margin="5" Click="Button_Click" />
+            <Button Content="W" Margin="5" Click="Button_Click" />
+            <Button Content="E" Margin="5" Click="Button_Click" />
+            <Button Content="R" Margin="5" Click="Button_Click" />
+            <Button Content="T" Margin="5" Click="Button_Click" />
+            <Button Content="Y" Margin="5" Click="Button_Click" />
+            <Button Content="U" Margin="5" Click="Button_Click" />
+            <Button Content="I" Margin="5" Click="Button_Click" />
+            <Button Content="O" Margin="5" Click="Button_Click" />
+            <Button Content="P" Margin="5" Click="Button_Click" />
+
+            <!-- række 2 af keyboardet -->
+            <Button Content="A" Margin="5" Click="Button_Click" />
+            <Button Content="S" Margin="5" Click="Button_Click" />
+            <Button Content="D" Margin="5" Click="Button_Click" />
+            <Button Content="F" Margin="5" Click="Button_Click" />
+            <Button Content="G" Margin="5" Click="Button_Click" />
+            <Button Content="H" Margin="5" Click="Button_Click" />
+            <Button Content="J" Margin="5" Click="Button_Click" />
+            <Button Content="K" Margin="5" Click="Button_Click" />
+            <Button Content="L" Margin="5" Click="Button_Click" />
+
+            <!-- række 3 af keyboardet -->
+            <Button Content="Backsp" Click="Button_Click" Margin="5"/>
+            <Button Content="Z" Margin="5" Click="Button_Click" />
+            <Button Content="X" Margin="5" Click="Button_Click" />
+            <Button Content="C" Margin="5" Click="Button_Click" />
+            <Button Content="V" Margin="5" Click="Button_Click" />
+            <Button Content="B" Margin="5" Click="Button_Click" />
+            <Button Content="N" Margin="5" Click="Button_Click" />
+            <Button Content="M" Margin="5" Click="Button_Click" />
+            <Button Content="Enter" Margin="5" Click="Button_Click" />
+        </UniformGrid>
+    </Grid>
+</Window>
